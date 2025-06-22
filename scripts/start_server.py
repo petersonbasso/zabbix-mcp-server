@@ -14,6 +14,10 @@ import sys
 import logging
 from pathlib import Path
 from typing import List
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Add src directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
@@ -66,42 +70,7 @@ def check_environment() -> bool:
     return True
 
 
-def load_env_file() -> None:
-    """Load environment variables from .env file if it exists."""
-    logger = logging.getLogger(__name__)
-    env_file = Path(".env")
-    
-    if env_file.exists():
-        logger.info("Loading environment variables from .env file")
-        print("Loading environment variables from .env file...")
-        
-        try:
-            with open(env_file, 'r', encoding='utf-8') as f:
-                for line_num, line in enumerate(f, 1):
-                    line = line.strip()
-                    if line and not line.startswith("#") and "=" in line:
-                        try:
-                            key, value = line.split("=", 1)
-                            key = key.strip()
-                            value = value.strip()
-                            
-                            # Remove quotes if present
-                            if value.startswith('"') and value.endswith('"'):
-                                value = value[1:-1]
-                            elif value.startswith("'") and value.endswith("'"):
-                                value = value[1:-1]
-                            
-                            os.environ[key] = value
-                            logger.debug(f"Set environment variable: {key}")
-                            
-                        except ValueError:
-                            logger.warning(f"Invalid line format in .env file (line {line_num}): {line}")
-                            
-        except Exception as e:
-            logger.error(f"Error reading .env file: {e}")
-            print(f"Warning: Could not read .env file: {e}")
-    else:
-        logger.info("No .env file found, using system environment variables")
+
 
 
 def show_configuration() -> None:
@@ -156,9 +125,6 @@ def main() -> None:
     logger.info("Starting Zabbix MCP Server")
     
     try:
-        # Load environment file if it exists
-        load_env_file()
-        
         # Check environment configuration
         if not check_environment():
             logger.error("Environment validation failed")

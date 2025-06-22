@@ -16,6 +16,10 @@ import logging
 from typing import Any, Dict, List, Optional
 from fastmcp import FastMCP
 from zabbix_utils import ZabbixAPI
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(
