@@ -19,7 +19,7 @@ Add this to your Claude Desktop `mcp.json` configuration file:
         "src/zabbix_mcp_server.py"
       ],
       "env": {
-        "ZABBIX_URL": "https://zabbix.example.com/api_jsonrpc.php",
+        "ZABBIX_URL": "https://zabbix.example.com",
         "ZABBIX_TOKEN": "<your_api_token>",
         "READ_ONLY": "false"
       }
@@ -42,7 +42,7 @@ Instead of `ZABBIX_TOKEN`, you can use:
 
 ```json
 "env": {
-  "ZABBIX_URL": "https://zabbix.example.com/api_jsonrpc.php",
+  "ZABBIX_URL": "https://zabbix.example.com",
   "ZABBIX_USER": "<username>",
   "ZABBIX_PASSWORD": "<password>",
   "READ_ONLY": "false"
@@ -91,7 +91,7 @@ For better error handling and logging, you can use the startup script:
         "scripts/start_server.py"
       ],
       "env": {
-        "ZABBIX_URL": "https://zabbix.example.com/api_jsonrpc.php",
+        "ZABBIX_URL": "https://zabbix.example.com",
         "ZABBIX_TOKEN": "<your_api_token>",
         "READ_ONLY": "false"
       }
@@ -109,7 +109,7 @@ Instead of setting environment variables in the MCP config, you can create a `.e
 cp config/.env.example .env
 
 # Edit .env with your settings
-ZABBIX_URL=https://your-zabbix-server.com/api_jsonrpc.php
+ZABBIX_URL=https://your-zabbix-server.com
 ZABBIX_TOKEN=your_actual_token_here
 READ_ONLY=false
 ```
@@ -167,7 +167,7 @@ Enable debug logging by adding to your environment:
 
 ```json
 "env": {
-  "ZABBIX_URL": "https://zabbix.example.com/api_jsonrpc.php",
+  "ZABBIX_URL": "https://zabbix.example.com",
   "ZABBIX_TOKEN": "<your_api_token>",
   "READ_ONLY": "false",
   "DEBUG": "1"

@@ -102,7 +102,7 @@ A comprehensive Model Context Protocol (MCP) server for Zabbix integration using
 
 ### Required Environment Variables
 
-- `ZABBIX_URL` - Your Zabbix server API endpoint (e.g., `https://zabbix.example.com/api_jsonrpc.php`)
+- `ZABBIX_URL` - Your Zabbix server API endpoint (e.g., `https://zabbix.example.com`)
 
 ### Authentication (choose one method)
 
