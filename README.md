@@ -205,7 +205,7 @@ This server is designed to work with MCP-compatible clients like Claude Desktop.
 
 2. **Run with Docker Compose:**
    ```bash
-   docker-compose up -d
+   docker compose up -d
    ```
 
 ### Building Docker Image
