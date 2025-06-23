@@ -12,7 +12,7 @@
       "env": {
         "ZABBIX_URL": "https://zabbix.example.com",
         "ZABBIX_TOKEN": "<your_api_token>",
-        "READ_ONLY": "false"
+        "READ_ONLY": "true"
       }
     }
   }

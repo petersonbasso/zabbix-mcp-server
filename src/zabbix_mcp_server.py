@@ -81,7 +81,7 @@ def is_read_only() -> bool:
     Returns:
         bool: True if read-only mode is enabled
     """
-    return os.getenv("READ_ONLY", "false").lower() in ("true", "1", "yes")
+    return os.getenv("READ_ONLY", "true").lower() in ("true", "1", "yes")
 
 
 def format_response(data: Any) -> str:

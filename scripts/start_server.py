@@ -100,7 +100,7 @@ def show_configuration() -> None:
     print(f"Authentication: {auth_method}")
     
     # Read-only mode
-    read_only = os.getenv('READ_ONLY', 'false').lower() in ('true', '1', 'yes')
+    read_only = os.getenv('READ_ONLY', 'true').lower() in ('true', '1', 'yes')
     read_only_str = 'Enabled' if read_only else 'Disabled'
     print(f"Read-only mode: {read_only_str}")
     logger.info(f"Read-only mode: {read_only_str}")

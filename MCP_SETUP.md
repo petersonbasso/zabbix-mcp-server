@@ -21,7 +21,7 @@ Add this to your Claude Desktop `mcp.json` configuration file:
       "env": {
         "ZABBIX_URL": "https://zabbix.example.com",
         "ZABBIX_TOKEN": "<your_api_token>",
-        "READ_ONLY": "false"
+        "READ_ONLY": "true"
       }
     }
   }
@@ -45,7 +45,7 @@ Instead of `ZABBIX_TOKEN`, you can use:
   "ZABBIX_URL": "https://zabbix.example.com",
   "ZABBIX_USER": "<username>",
   "ZABBIX_PASSWORD": "<password>",
-  "READ_ONLY": "false"
+  "READ_ONLY": "true"
 }
 ```
 
@@ -93,7 +93,7 @@ For better error handling and logging, you can use the startup script:
       "env": {
         "ZABBIX_URL": "https://zabbix.example.com",
         "ZABBIX_TOKEN": "<your_api_token>",
-        "READ_ONLY": "false"
+        "READ_ONLY": "true"
       }
     }
   }
@@ -111,7 +111,7 @@ cp config/.env.example .env
 # Edit .env with your settings
 ZABBIX_URL=https://your-zabbix-server.com
 ZABBIX_TOKEN=your_actual_token_here
-READ_ONLY=false
+READ_ONLY=true
 ```
 
 Then use a simpler MCP configuration:
@@ -169,7 +169,7 @@ Enable debug logging by adding to your environment:
 "env": {
   "ZABBIX_URL": "https://zabbix.example.com",
   "ZABBIX_TOKEN": "<your_api_token>",
-  "READ_ONLY": "false",
+  "READ_ONLY": "true",
   "DEBUG": "1"
 }
 ```

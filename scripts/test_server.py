@@ -83,7 +83,7 @@ def test_environment() -> bool:
         return False
     
     # Check read-only mode
-    read_only = os.getenv("READ_ONLY", "false").lower() in ("true", "1", "yes")
+    read_only = os.getenv("READ_ONLY", "true").lower() in ("true", "1", "yes")
     print(f"ℹ️  Read-only mode: {'Enabled' if read_only else 'Disabled'}")
     
     return True
@@ -169,7 +169,7 @@ def test_read_only_mode() -> bool:
     Returns:
         bool: True if read-only mode works correctly
     """
-    read_only = os.getenv("READ_ONLY", "false").lower() in ("true", "1", "yes")
+    read_only = os.getenv("READ_ONLY", "true").lower() in ("true", "1", "yes")
     
     if not read_only:
         print("\n⏭️  Skipping read-only mode test (not enabled)")
