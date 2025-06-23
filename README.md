@@ -5,6 +5,10 @@
 
 A comprehensive Model Context Protocol (MCP) server for Zabbix integration using FastMCP and python-zabbix-utils. This server provides complete access to Zabbix API functionality through MCP-compatible tools.
 
+<a href="https://glama.ai/mcp/servers/@mpeirone/zabbix-mcp-server">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@mpeirone/zabbix-mcp-server/badge" alt="zabbix-mcp-server MCP server" />
+</a>
+
 ## Features
 
 ### 🏠 Host Management
